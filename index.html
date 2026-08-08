@@ -289,7 +289,7 @@
                     <h3 class="case-study-title">football tactics Board</h3>
                     <p class="case-study-summary">
                        <!-- Football Tactics Board -->
-<!-- Football Tactics Board -->
+
 A browserbased tool for building and sharing football game plans for coaches, analysts, and fans. Start from a preset formation, then drag players and the ball around the pitch and sketch tactics with line, arrow, pen, and highlight tools. Players can be relabeled, substitutes brought on, and moves animated frame by frame, all with undo/redo. Boards save under named slots, export as PNG, or share instantly via a single link  no account needed. Built with plain HTML, CSS, and JavaScript, keeping it fast and lightweight.
                     </p>
                     <div class="case-study-blocks">
@@ -297,11 +297,13 @@ A browserbased tool for building and sharing football game plans for coaches, an
                             <h4 class="case-study-block-title">The Problem</h4>
                             <p class="case-study-block-text"><!-- The Challenge -->
 Explaining football tactics usually means static diagrams or whiteboard photos that can't show movement or be easily edited and shared
-                            </div>
+                            </p>
+                        </div>
                         <div class="case-study-block">
                             <h4 class="case-study-block-title">My Approach</h4>
                             <p class="case-study-block-text"><!-- Technical Approach -->
-Plan to build it with vanilla HTML, CSS, and JavaScript  no frameworks needed. Player and ball positions will live in a simple JS state object, rendered as draggable elements on a percentage-based pitch. Drawings will use an HTML canvas layered on top. State will save to localStorage, with sharing handled by encoding it into a URL link.</div>
+Plan to build it with vanilla HTML, CSS, and JavaScript  no frameworks needed. Player and ball positions will live in a simple JS state object, rendered as draggable elements on a percentage-based pitch. Drawings will use an HTML canvas layered on top. State will save to localStorage, with sharing handled by encoding it into a URL link.</p>
+                        </div>
                         <div class="case-study-block">
                             <h4 class="case-study-block-title">What I'd Improve Next</h4>
                             <p class="case-study-block-text">Future plans include true pinch-to-zoom on mobile, a proper backend so tactics can be shared across devices (not just via URL), and cloud accounts instead of localStorage.</p>
@@ -566,28 +568,7 @@ formStatus.classList.add('error');
         }
     });
 
-  
-    async function loadSavedImages() {
-        try {
-            const response = await fetch('/api/images');
-            const images = await response.json();
-            
-            Object.keys(images).forEach(photoId => {
-                const imgId = 'img' + photoId.replace('photo', '');
-                const img = document.getElementById(imgId);
-                if (img) {
-                    img.src = images[photoId];
-                    img.style.display = 'block';
-                }
-            });
-        } catch (error) {
-            console.error('Error loading saved images:', error);
-        }
-    }
-
-
-    loadSavedImages();
- // About section animations
+    // About section animations
     const aboutSection = document.querySelector('.about');
     if (aboutSection) {
         const aboutEyebrow = document.querySelector('.about-eyebrow');
