@@ -2599,7 +2599,7 @@ footer p {
     width: 100%;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 500px) {
     .contact {
         padding: 4rem 1rem;
     }
